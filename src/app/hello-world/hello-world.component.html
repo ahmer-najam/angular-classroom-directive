@@ -1,0 +1,18 @@
+<!-- style  -->
+
+<div [ngStyle]="{ 'background-color': this.bgColor, color: this.textColor }">
+  This text has custom styles.
+</div>
+<br />
+<!-- class based on ternary operator -->
+<div [class]="this.stop == true ? 'danger' : 'success'">
+  This text has class based directive.
+</div>
+<br />
+<!-- class based on conditional function -->
+<div [class]="getClass()">
+  This text has class based multiple conditional function.
+</div>
+<br />
+<!-- Image based on condition -->
+<img [src]="getImageUrl()" style="width: 250px; height: 200px" />
