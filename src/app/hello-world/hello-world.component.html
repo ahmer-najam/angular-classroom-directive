@@ -1,5 +1,4 @@
 <!-- style  -->
-
 <div [ngStyle]="{ 'background-color': this.bgColor, color: this.textColor }">
   This text has custom styles.
 </div>
@@ -16,3 +15,20 @@
 <br />
 <!-- Image based on condition -->
 <img [src]="getImageUrl()" style="width: 250px; height: 200px" />
+<hr />
+<h1>STRUCTRURAL DIRECTIVES</h1>
+<hr />
+<button (click)="onVisibleSpan()">TOGGLE SPAN</button>
+<!-- ng if -->
+<span *ngIf="this.isSpanVisible">SPAN IS VISIBLE</span>
+
+<!-- ngFor -->
+<ul>
+  <li *ngFor="let item of list">{{ item.id }} - {{ item.name }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let table of mathTable">
+    {{ table.table }} * {{ table.id }} = {{ table.table * table.id }}
+  </li>
+</ul>

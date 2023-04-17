@@ -8,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class HelloWorldComponent implements OnInit {
   textColor;
   bgColor;
-  stop = true;
-  signalLight = 'ready';
+  stop: boolean = true;
+  signalLight: string = 'ready';
   selectedImage = 'danger';
+  isSpanVisible = true;
+  list = [
+    { id: 1, name: 'Item 1' },
+    { id: 2, name: 'Item 2' },
+    { id: 3, name: 'Item 3' },
+  ];
+
+  mathTable = [
+    { id: 1, table: 2 },
+    { id: 2, table: 2 },
+    { id: 3, table: 2 },
+    { id: 4, table: 2 },
+    { id: 5, table: 2 },
+  ];
 
   ngOnInit(): void {
     this.bgColor = '#3498db';
@@ -32,5 +46,9 @@ export class HelloWorldComponent implements OnInit {
     } else {
       return '../../assets/success.jpg';
     }
+  }
+
+  onVisibleSpan() {
+    this.isSpanVisible = !this.isSpanVisible;
   }
 }
